@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ question }} details{% endblock %}
+
+{% block content %}
+    {% if question %}
+        <h1>{{ question }}</h1>
+        <div class="question-body">
+        <div class="question-in-japanese">{{ question.question_in_japanese }}</div>
+        <div class="question-in-english">{{ question.questions_in_english }}</div>
+            <div class="possible-answers">
+                <ol type="A">
+                    {% for answer in question.possible_answers %}
+                        <li class="possible-answer">{{ answer }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+            <div class="answer dropdown">
+                <button class="dropbtn">Answer</button>
+                <div class="dropdown-content">{{ question.answer }}</div>
+            </div>
+            <div class="notes">{{ question.notes }}</div>
+            <div class="question-link"><a href="{{ question.link }}">Relevant Link</a></div>
+        </div>
+        <hr>
+        <!--TABLE OF VOCABULARY-->
+        <h2>Vocabulary</h2>
+        {% if vocab_list %}
+            <div style="overflow-x:auto;">
+            <table border="1" class="vocabulary-table">
+                <thead class="table-header">
+                    <tr>
+                        <th>Japanese Word</th>
+                        <th>Pronunciation</th>
+                        <th>English</th>
+                    </tr>
+                </thead>
+                <tbody class="table-body">
+                    {% for vocab in vocab_list %}
+                        <tr>
+                            <td class="kanji">{{ vocab.japanese_word }}</td>
+                            <td>{{ vocab.pronunciation }}</td>
+                            <td>{{ vocab.english_translation }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            </div>
+        {% else %}
+            <p>No vocabulary entries available.</p>
+        {% endif %}
+    {% else %}
+        <p>wut happen?</p>
+{% endif %}
+{% endblock %}

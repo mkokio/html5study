@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}All Vocab{% endblock %}
+
+{% block content %}
+    <h1>All Vocab</h1>
+    <div style="overflow-x:auto;">
+    <table border="1" class="vocabulary-table">
+        <thead class="table-header">
+            <tr>
+                <th>番号</th>
+                <th>Japanese Word</th>
+                <th>Pronunciation</th>
+                <th>English</th>
+            </tr>
+        </thead>
+        <tbody class="table-body">
+            {% for vocab in vocab_list %}
+                <tr>
+                    <td><a class="question-code" href="{% url 'questions:detail' vocab.question %}">{{ vocab.question }}</a></td>
+                    <td class="kanji">{{ vocab.japanese_word }}</td>
+                    <td>{{ vocab.pronunciation }}</td>
+                    <td>{{ vocab.english_translation }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+{% endblock  %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}サクセス&#x1f4a9;{% endblock %}
+
+{% block content %}
+    <h2>Success!</h2>
+    <form action="{% url 'questions:add' %}">
+        <p>You added a question. Good.</p>
+        <button type="submit" class="add-another" autofocus>Add another question?</button>
+        <p><a href="{% url 'questions:index' %}">Go to Questions List</a></p>
+    </form>
+</body>
+{% endblock %}

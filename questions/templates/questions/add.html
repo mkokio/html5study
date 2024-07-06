@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}Add a Question{% endblock %}
+
+{% block content %}
+    <h1>"C" stands for Create</h1>
+    <h2>When we are talking about a CRUD application</h2>
+    <form action="{% url 'questions:add' %}" method="POST">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Question Information</legend>
+            <label for="question-code">Code</label>
+            <input type="text" id="question-code" name="question_code" placeholder="5-5" required pattern="\d+-\d+" autofocus>
+            <label for="question-japanese">日本語</label>
+            <input type="text" id="question-japanese" name="question_in_japanese" placeholder="質問" required>
+            <label for="question-english">English</label>
+            <input type="text" id="question-english" name="question_in_english" placeholder="Question" required>
+        </fieldset>
+        <fieldset>
+            <legend>Possible Answers</legend>
+            <ol type="A">
+                <li><input type="text" name="choice_a"></li>
+                <li><input type="text" name="choice_b"></li>
+                <li><input type="text" name="choice_c"></li>
+                <li><input type="text" name="choice_d"></li>
+                <li><input type="text" name="choice_e"></li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <legend>Answer</legend>
+            <input type="text" name="answer" placeholder="answer" required>
+        </fieldset>
+        <fieldset>
+            <legend>Extras</legend>
+            <label for="notes">Notes</label>
+            <textarea rows="4" id="notes" name="notes" placeholder="notes"></textarea><br>
+            <label for="link">Link</label>
+            <input type="url" id="link" name="link" placeholder="url">
+        </fieldset>
+        <fieldset>
+            <legend>Vocabulary</legend>
+            <div style="overflow-x:auto;">
+            <table border="1">
+                <tr>
+                    <th>時本語</th>
+                    <th>Pronunciation</th>
+                    <th>English</th>
+                </tr>
+                {% for i in "123456" %}
+                <tr>
+                    <td><input type="text" name="j{{ i }}" placeholder="日本語"></td>
+                    <td><input type="text" name="p{{ i }}" placeholder="ひらがな"></td>
+                    <td><input type="text" name="e{{ i }}" placeholder="English"></td>
+                </tr>
+                {% endfor %}
+            </table>
+            </div>
+        </fieldset>
+        <div class="button-container">
+        <button type="submit" class="submit">Add this Question</button><!--type="Submit" is the default afaik-->
+
+        <button type="Reset" class="reset">Clear Form</button>
+        </div>
+    </form>
+{% endblock %}

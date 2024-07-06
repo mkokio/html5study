@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}All Questions{% endblock %}
+
+{% block content %}
+    <h1>All questions for HTML5 study</h1>
+    {% if question_list %}
+    <ul>
+    {% for question in question_list %}
+        <li class="question-body">
+            <a class="question-code" href="{% url 'questions:detail' question.question_code %}">{{ question.question_code }}</a>
+            <div class="question-in-japanese">{{ question.question_in_japanese }}</div>
+            <div class="question-in-english">{{ question.questions_in_english }}</div>
+            <div class="possible-answers">
+                <ol type="A">
+                    {% for answer in question.possible_answers %}
+                        <li class="possible-answer">{{ answer }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+            <hr>
+            <!--
+            <div class="answer" style="background-color: black">{{ question.answer }}</div>
+            <div class="notes">{{ question.notes }}</div>
+            <div class="question-link"><a href="{{ question.link }}">Relevant Link</a></div>
+            -->
+        </li>
+    {% endfor %}
+    </ul>
+    <!--<a href="{% url 'questions:add' %}">Add a question</a>-->
+{% else %}
+    <p>No questions are available.</p>
+{% endif %}
+{% endblock %}
