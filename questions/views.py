@@ -31,7 +31,6 @@ def add(request):
             request.POST.get("choice_c"),
             request.POST.get("choice_d"),
             request.POST.get("choice_e"),
-            request.POST.get("choice_f"),
         ]
         answer = request.POST.get("answer")
         notes = request.POST.get("notes")
