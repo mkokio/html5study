@@ -1,13 +1,13 @@
 <nav>
     <ul class="nav">
         <li class="nav">
-            <a href="{% url 'questions:add' %}" class="{% if request.resolver_match.url_name == 'add' %}active{% endif %}">Add a Question</a>
+            <a href="{% url 'questions:add' %}" class="{% if request.resolver_match.url_name == 'add' %}active{% endif %}">Add</a>
         </li>
         <li class="nav">
-            <a href="{% url 'questions:allvocab' %}" class="{% if request.resolver_match.url_name == 'allvocab' %}active{% endif %}">Vocabulary List</a>
+            <a href="{% url 'questions:allvocab' %}" class="{% if request.resolver_match.url_name == 'allvocab' %}active{% endif %}">Vocab</a>
         </li>
         <li class="nav">
-            <a href="{% url 'questions:index' %}" class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">Questions List</a>
+            <a href="{% url 'questions:index' %}" class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">Questions</a>
         </li>
     </ul>
 </nav>

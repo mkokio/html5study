@@ -5,7 +5,7 @@ from django.urls import reverse
 from .models import Question, Vocabulary
 
 def index(request):
-    question_list = Question.objects.all()
+    question_list = Question.objects.all().order_by('question_code')
     context = {"question_list": question_list}
     #render() function takes the request object as its first argument, a template name 
     #as its second argument and a dictionary as its optional third argument
@@ -69,7 +69,10 @@ def success(request):
     return render(request, "questions/success.html")
 
 def allvocab(request):
-    vocab_list = Vocabulary.objects.all()  # Get related vocabulary entries
+    vocab_list = Vocabulary.objects.all().order_by('question__question_code')  # Get and sort related vocabulary entries
+    # leverage Django's powerful ORM capabilities to easily navigate and query related models.
+    # question__question_code tells Django to order the Vocabulary instances by the question_code field of the related Question instances.
+    # __ (double underscore) is used to follow the relationship.
     context = {
         "vocab_list": vocab_list,
     }
