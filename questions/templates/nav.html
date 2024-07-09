@@ -4,10 +4,10 @@
             <a href="{% url 'questions:add' %}" class="{% if request.resolver_match.url_name == 'add' %}active{% endif %}">Add</a>
         </li>
         <li class="nav">
-            <a href="{% url 'questions:allvocab' %}" class="{% if request.resolver_match.url_name == 'allvocab' %}active{% endif %}">Vocab</a>
+            <a href="{% url 'questions:allvocab' %}" class="{% if request.resolver_match.url_name == 'allvocab' %}active{% endif %}">単語</a>
         </li>
         <li class="nav">
-            <a href="{% url 'questions:index' %}" class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">Questions</a>
+            <a href="{% url 'questions:index' %}" class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">問題</a>
         </li>
     </ul>
 </nav>
