@@ -26,8 +26,9 @@ li.nav a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 12px 12px;
     text-decoration: none;
+    font-size: 1.5rem;
 }
 li.nav a:hover {
     background-color: rgb(209, 56, 0);
@@ -167,7 +168,9 @@ footer {
     background-color: orangered;
     text-align: end;
     color: #f9f9f9;
-    padding: 10px;
+    padding-top: 20px;
+    padding-right: 12px;
+    padding-bottom: 5px;
     margin-top: 25px;
     border-radius: 8px;
 }
@@ -228,7 +231,7 @@ ul {
 hr {
     border: none;
     height: 3px; /* Set height of the HR */
-    background-color: skyblue; /* Color of the HR */
+    background-color: orangered; /* Color of the HR */
 }
 
 /*Details (detail.html) */
