@@ -77,3 +77,7 @@ def allvocab(request):
         "vocab_list": vocab_list,
     }
     return render(request, "questions/allvocab.html", context)
+
+#step 1: create the view
+def landing_page(request):
+    return render(request, 'landing_page.html')

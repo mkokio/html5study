@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from questions import views
 
 urlpatterns = [
+        path("", views.landing_page, name="landing_page"),  # Set the landing page as the default route
     path('questions/', include('questions.urls')),
     path('admin/', admin.site.urls),
 ]

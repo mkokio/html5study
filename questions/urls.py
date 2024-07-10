@@ -9,8 +9,4 @@ urlpatterns = [
     path("allvocab/", views.allvocab, name="allvocab"),
     # ex: /questions/5-5/
     path("<str:question_code>/", views.detail, name="detail"),
-    # ex: /polls/5/results/
-    #path("<int:question_id>/results/", views.results, name="results"),
-    # ex: /polls/5/vote/
-    #path("<int:question_id>/vote/", views.vote, name="vote"),
 ]
