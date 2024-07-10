@@ -20,7 +20,9 @@
                 <div class="dropdown-content">{{ question.answer }}</div>
             </div>
             <div class="notes">{{ question.notes }}</div>
-            <div class="question-link"><a href="{{ question.link }}">Relevant Link</a></div>
+            {% if question.link %}
+                <div class="question-link"><a href="{{ question.link }}">Relevant Link</a></div>
+            {% endif %}
         </div>
         <hr>
         <!--TABLE OF VOCABULARY-->
