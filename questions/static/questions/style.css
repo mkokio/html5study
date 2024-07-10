@@ -1,8 +1,13 @@
 body {
-    background: rgb(219, 235, 238);
+    background: seashell;
 }
 h1 {
-    color: rgb(128, 0, 128);
+    color: slategray;
+    margin-left: 10px;
+}
+h2 {
+    color: rgb(209, 56, 0);
+    margin-left: 10px;
 }
 
 /*Navigation Bar*/
@@ -11,7 +16,8 @@ ul.nav {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #000480;
+    background-color: orangered;
+    border-radius: 8px;
 }
 li.nav {
     float: right;
@@ -24,14 +30,14 @@ li.nav a {
     text-decoration: none;
 }
 li.nav a:hover {
-    background-color: #750080;
+    background-color: rgb(209, 56, 0);
 }
 li.nav a.active {
     color: #FFFFFF;
-    background: #000480;
+    background: orangered;
     text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
     color: #FFFFFF;
-    background: #000480;
+    background: orangered;
 }
 /*Tables*/
 table {
@@ -158,11 +164,12 @@ button{
 
 /*footer*/
 footer {
-    background-color: #000480;
+    background-color: orangered;
     text-align: end;
     color: #f9f9f9;
     padding: 10px;
     margin-top: 25px;
+    border-radius: 8px;
 }
 footer a:visited{
     color: white;
@@ -171,11 +178,13 @@ footer a:visited{
 /*links*/
 a:link {
     color: blue;
+    text-decoration: none;
 }
   
 /* visited link */
 a:visited {
     color: purple;
+    text-decoration: none;
 }
   
 /* mouse over link */
