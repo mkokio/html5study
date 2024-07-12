@@ -19,7 +19,7 @@
                 <button class="dropbtn">Answer</button>
                 <div class="dropdown-content">{{ question.answer }}</div>
             </div>
-            <div class="notes">{{ question.notes }}</div>
+            <div class="notes">{{ question.notes|linebreaksbr }}</div><!--properly display line breaks-->
             {% if question.link %}
                 <div class="question-link"><a href="{{ question.link }}">Relevant Link</a></div>
             {% endif %}
