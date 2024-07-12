@@ -4,7 +4,7 @@
 
 {% block content %}
 <h1>Add a question</h1>
-<form id="main-form" action="{% url 'questions:add' %}" method="POST">
+<form id="main-form" action="{% url 'questions:add' %}" method="POST" autocomplete="off">
     {% csrf_token %}
     <fieldset>
         <legend>Question Information</legend>
