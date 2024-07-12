@@ -234,6 +234,7 @@ ul {
     background-color: rgb(228, 228, 228);
     margin-left: 5px;
     padding-left: 5px;
+    margin-bottom: 5px;
 }
 .possible-answers {
     border-left: 6px solid #616161;
@@ -263,6 +264,9 @@ hr {
 .notes {
     margin: 15px;
     font-family: 'Courier New', Courier, monospace;
+    border: 2px solid #ccc;
+    padding: 5px;
+    
 }
 
 /*Add (a.i. admittedly chose this mostly)*/

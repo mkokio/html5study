@@ -4,7 +4,7 @@
 
 {% block content %}
     {% if question %}
-        <h1>{{ question }}</h1>
+        <h1>{{ question }} Details</h1>
         <div class="question-body">
         <div class="question-in-japanese">{{ question.question_in_japanese }}</div>
         <div class="question-in-english">{{ question.questions_in_english }}</div>
@@ -19,7 +19,9 @@
                 <button class="dropbtn">Answer</button>
                 <div class="dropdown-content">{{ question.answer }}</div>
             </div>
+            {% if question.notes %}
             <div class="notes">{{ question.notes|linebreaksbr }}</div><!--properly display line breaks-->
+            {% endif %}
             {% if question.link %}
                 <div class="question-link"><a href="{{ question.link }}">Relevant Link</a></div>
             {% endif %}
