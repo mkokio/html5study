@@ -215,15 +215,37 @@ a:hover {
     color: lightblue;
 }
 
-/*Questions list (index.html)*/
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+/*index.html grid*/
+.index-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    row-gap: 15px;
+    column-gap: 15px;
+    justify-items: stretch;
+    justify-content: space-evenly;
 }
+/* Media query to limit to a maximum of 3 columns on larger screens */
+@media (min-width: 960px) {
+    .index-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* Media query for small screens */
+@media (max-width: 480px) {
+    .index-container {
+        grid-template-columns: 1fr;
+    }
+}
+.index-question-body {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/*Questions list (index.html)*/
 .question-code {
     font-size: 1em;
-    background-color: AliceBlue;
 }
 .question-in-japanese{
     display: inline-block;
@@ -241,6 +263,7 @@ ul {
     background-color: lightgrey;
     font-style: italic;
     padding: 1px;
+    font-size: smaller;
 }
 hr {
     border: none;
@@ -253,8 +276,6 @@ hr {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    padding-bottom: 10px;
-    margin-bottom: 5px;
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 5px;

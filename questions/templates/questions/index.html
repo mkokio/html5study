@@ -5,10 +5,11 @@
 {% block content %}
     <h1>All questions for HTML5 study</h1>
     {% if question_list %}
-    <ul>
+    
+    <div class="index-container">
     {% for question in question_list %}
-        <li class="question-body">
-            <a class="question-code" href="{% url 'questions:detail' question.question_code %}">{{ question.question_code }}</a>
+        <div class="index-question-body">
+            <a class="question-code" href="{% url 'questions:detail' question.question_code %}">{{ question.question_code }}</a><br>
             <div class="question-in-japanese">{{ question.question_in_japanese }}</div>
             <div class="question-in-english">{{ question.questions_in_english }}</div>
             <div class="possible-answers">
@@ -19,15 +20,9 @@
                 </ol>
             </div>
             <hr>
-            <!--
-            <div class="answer" style="background-color: black">{{ question.answer }}</div>
-            <div class="notes">{{ question.notes }}</div>
-            <div class="question-link"><a href="{{ question.link }}">Relevant Link</a></div>
-            -->
-        </li>
+        </div> 
     {% endfor %}
-    </ul>
-    <!--<a href="{% url 'questions:add' %}">Add a question</a>-->
+    </div>
 {% else %}
     <p>No questions are available.</p>
 {% endif %}
