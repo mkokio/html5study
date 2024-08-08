@@ -218,7 +218,7 @@ a:hover {
 /*index.html grid*/
 .index-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     row-gap: 15px;
     column-gap: 15px;
     justify-items: stretch;
@@ -231,9 +231,9 @@ a:hover {
     }
 }
 /* Media query for small screens */
-@media (max-width: 480px) {
+@media (max-width: 360px) {
     .index-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 90vw;
     }
 }
 .index-question-body {
@@ -287,7 +287,7 @@ hr {
     font-family: 'Courier New', Courier, monospace;
     border: 2px solid #ccc;
     padding: 5px;
-    
+
 }
 
 /*Add (a.i. admittedly chose this mostly)*/
