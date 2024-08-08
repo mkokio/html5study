@@ -52,8 +52,8 @@ table {
     margin: 0 auto; /* Center the form horizontally */
     padding: 20px; /* Example padding around the form */
     border-radius: 20px;
+    border-width: ;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 th {
     background-color: #4c4c4c;
