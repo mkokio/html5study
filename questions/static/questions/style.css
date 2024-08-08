@@ -52,7 +52,6 @@ table {
     margin: 0 auto; /* Center the form horizontally */
     padding: 20px; /* Example padding around the form */
     border-radius: 20px;
-    border-width: ;
     overflow: hidden;
 }
 th {
@@ -241,7 +240,7 @@ a:hover {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 /*Questions list (index.html)*/
 .question-code {
@@ -262,8 +261,9 @@ a:hover {
     border-left: 6px solid #616161;
     background-color: lightgrey;
     font-style: italic;
-    padding: 1px;
+    padding: 1px 2px;
     font-size: smaller;
+    overflow-wrap: break-word;/*ensures wrapping text especially on mobile*/
 }
 hr {
     border: none;
@@ -279,7 +279,7 @@ hr {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .notes {
@@ -298,7 +298,7 @@ form {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 fieldset {
@@ -324,6 +324,7 @@ textarea {
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 3px;
+    resize: vertical; /*only allows vertical resizing using the grabber*/
 }
 /*MODAL*/
 .submit-label:hover {
