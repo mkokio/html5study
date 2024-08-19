@@ -3,8 +3,7 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
 from .models import Question, Vocabulary
-from additionalfunctions import sort_chapters_and_questions, remove_duplicates_by_attribute
-
+from .additionalfunctions import sort_chapters_and_questions, remove_duplicates_by_attribute
 #for sorting
 from django.db.models import IntegerField, F
 from django.db.models.functions import Cast, Substr

@@ -1,3 +1,8 @@
+from .models import Question, Vocabulary
+from django.db.models.functions import Cast, Substr
+from django.db.models import IntegerField, F
+
+
 #sorting
 def sort_chapters_and_questions():
     questions = Question.objects.annotate(
